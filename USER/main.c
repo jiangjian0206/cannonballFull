@@ -225,7 +225,7 @@ int main(void)
 	InitTaskStr();
 	IWDG_Init(4,625);
      
-	Key1.KeyShortDown_F =1;
+	Key2.KeyShortDown_F =1;
 	printf("\r\n start version 3!\r\n");
 	while (1)
 	{
@@ -235,7 +235,7 @@ int main(void)
 		Task3(&F_DelayStr_Exam3,&Task3Infor,&Key3);
 
 		Task11(&F_DelayStr_Exam11,&Task11Infor);
-		 usart();
+		usart();
 
 		if(g_sem_self ==1)
 		{
@@ -243,8 +243,7 @@ int main(void)
 			Task2(&F_DelayStr_Exam2,&Task2Infor,&Key2);
 			Task4(&F_DelayStr_Exam4,&Task4Infor,&Key5); //
 			Task10(&F_DelayStr_Exam10,&Task10Infor,&Key6); //
-
-		}else {
+			
 
 		Task5(&F_DelayStr_Exam5,&Task5Infor,&Key5); // ×ó
 		Task6(&F_DelayStr_Exam6,&Task6Infor,&Key6); // ºó
